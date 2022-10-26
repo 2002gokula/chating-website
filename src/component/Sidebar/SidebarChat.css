@@ -1,0 +1,51 @@
+.SidebarChat {
+  display: flex;
+  cursor: pointer;
+  padding: 10px 19px;
+  padding-right: 9px;
+  height: 53px;
+  border-bottom: 1px solid rgb(65, 65, 66);
+}
+.SidebarChat__Avator {
+}
+.SidebarChat:hover {
+  background-color: #f0f2f5;
+}
+.SidebarChat__info {
+  width: 100%;
+  margin-left: 12px;
+  text-align: start;
+
+  margin-top: -20px;
+}
+.SidebarChat__title {
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+.SidebarChat__title > span {
+  font-size: 12px;
+
+  line-height: 20px;
+  color: #ffffff;
+  align-items: flex-end;
+}
+.SidebarChat__info > h4 {
+  font-size: 16px;
+  display: flex;
+  text-overflow: ellipsis;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #ffffff;
+  overflow-wrap: break-word;
+  /* margin-bottom: 8px; */
+}
+.SidebarChat__info > .SidebarChat__Message > p {
+  margin-top: -20px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #667781;
+  text-overflow: ellipsis;
+}

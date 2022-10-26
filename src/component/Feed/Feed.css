@@ -1,0 +1,55 @@
+.Feed {
+  flex: 0.3;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.app__videos {
+  margin-left: 10px;
+  position: relative;
+  height: 80%;
+  border-radius: 20px;
+  overflow: scroll;
+  width: 95%;
+
+  scroll-snap-type: y mandatory;
+}
+.app__videos::-webkit-scrollbar {
+  display: none;
+}
+.AddVideo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -90px;
+  gap: 10px;
+}
+.AddVideo > input {
+  display: flex;
+  padding: 10px 10px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  align-items: center;
+  justify-content: center;
+}
+.AddVideo > button {
+  padding: 10px 10px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  border: 1px solid white;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.app__videos {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+@media (max-width: 786px) {
+  .Feed {
+    display: none;
+  }
+}

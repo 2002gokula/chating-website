@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+
+import "./App.css"
+import Sidebar from "./component/Sidebar/Sidebar"
+import Chat from "./component/Chat/Chat"
+import Feed from "./component/Feed/Feed"
+import Header from "./component/Header/Header"
+import { Route, Routes } from "react-router-dom"
+import Login from "./component/Login/Login"
+import { useStateValue } from "./StateProvider"
+import ChatWelcomeScreen from "./component/Chat/ChatWelcomeScreen"
+import VideoCall from "./component/VideoCall/VideoCall"
 
 function App() {
+  const [{ user }, dispatch] = useStateValue()
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!user ? (
+        <Login />
+      ) : (
+        <>
+          <Header />
+          <Sidebar />
+
+          <Routes>
+            <Route path="/room/:roomId" element={<Chat />} />
+            <Route path="/" element={<ChatWelcomeScreen />} />
+            <Route path="/meetingroom" element={<VideoCall />} />
+          </Routes>
+          <Feed />
+        </>
+      )}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

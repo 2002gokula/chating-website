@@ -1,0 +1,20 @@
+.ChatWelcomeScreen {
+  flex: 0.5;
+  background-color: #000000;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.SvgIcon {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.ChatingScreen__Text {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  color: white;
+  margin-top: 60px;
+}
